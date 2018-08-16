@@ -1,0 +1,5 @@
+2018/08/15 22:02:22 [I] [control.go:276] [f392a888a9ea6bbf] login to server success, get run id [f392a888a9ea6bbf]
+2018/08/15 22:02:22 [I] [service.go:49] admin server listen on 127.0.0.1:7400
+2018/08/15 22:02:22 [I] [control.go:411] [f392a888a9ea6bbf] [alex # change this, see below.hongmei] start proxy success
+2018/08/15 22:02:22 [I] [control.go:411] [f392a888a9ea6bbf] [alex # change this, see below.gt] start proxy success
+2018/08/15 22:02:22 [I] [control.go:411] [f392a888a9ea6bbf] [alex # change this, see below.lululemon-hm] start proxy success
