@@ -24,7 +24,6 @@ class CheckUserInformation extends FormRequest
     public function rules()
     {
         return [
-            // 'title' => 'required|unique:posts|max:255',
             'name' => 'required',
             'email' => 'required',
         ];

@@ -17,23 +17,15 @@ class GetFileController extends Controller
     {
         $name = $request->input('name');
         $email = $request->input('email');
-        $email=$request->email;
-        if ($request->name == ''||$request->email == '') {
-            return redirect('/');
-        }
-        // $validatedData = $request->validate([
-        //     'title' => 'required|unique:posts|max:255',
-        //      'body' => 'required',
-        // ]);
-        $validated = $request->validated();
-        $gtuser=new GtUser();
+
+        $gtuser = new GtUser();
         $gtuser->name = $name;
         $gtuser->email = $email;
         $gtuser->save();
         $file= public_path()."/download/test.ppt";
         $headers = array(
-            'Content-Type: application/ppt',
-          );
+          'Content-Type: application/ppt',
+        );
 
   
       return  response()->file($file,$headers);
