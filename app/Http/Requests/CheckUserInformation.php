@@ -13,7 +13,7 @@ class CheckUserInformation extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,8 +24,12 @@ class CheckUserInformation extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:posts|max:255',
-            'body' => 'required',
+            // 'title' => 'required|unique:posts|max:255',
+            'name' => 'required',
+            'email' => 'required',
         ];
     }
+
+    
+    
 }

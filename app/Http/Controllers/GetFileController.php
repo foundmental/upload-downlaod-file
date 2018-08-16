@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
+use App\Http\Requests\CheckUserInformation;
 use App\GtUser;
 use Illuminate\Support\Facades\DB;
 class GetFileController extends Controller
@@ -9,10 +10,10 @@ class GetFileController extends Controller
     /**
      * Store a new user.
      *
-     * @param  Request  $request
+     * @param  CheckUserInformation  $request
      * @return Response
      */
-    public function getFile(Request $request)
+    public function getFile(CheckUserInformation $request)
     {
         $name = $request->input('name');
         $email = $request->input('email');
@@ -20,6 +21,10 @@ class GetFileController extends Controller
         if ($request->name == ''||$request->email == '') {
             return redirect('/');
         }
+        // $validatedData = $request->validate([
+        //     'title' => 'required|unique:posts|max:255',
+        //      'body' => 'required',
+        // ]);
         $validated = $request->validated();
         $gtuser=new GtUser();
         $gtuser->name = $name;
