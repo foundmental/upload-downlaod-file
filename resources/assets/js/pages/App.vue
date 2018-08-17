@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="dgfdg">
+    <div id="app" class="">
      
        <div class="page">
             <transition name="fade">

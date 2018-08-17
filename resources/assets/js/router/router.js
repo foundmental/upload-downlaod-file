@@ -10,9 +10,14 @@ var router = new Router({
             path: '/',
             name: 'home',
             component: Home,
-            props: true
+            props: true,
         },
-       
+        // {
+        //     path: '/admin',
+        //     name: 'AdminUploadFile',
+        //     component: AdminUploadFile,
+        //     props: true,
+        // }, 
     ]
 })
 
