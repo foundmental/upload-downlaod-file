@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+Route::get('/admin', function(){
+    return view("admin");
+});
+Route::post('/admin/putfile', 'PutFileController@putFile');
 
 Route::post('/getfile', 'GetFileController@getFile')->middleware('check.nm');

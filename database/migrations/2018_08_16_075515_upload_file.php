@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePUsersTable extends Migration
+class UploadFile extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreatePUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('p_users', function (Blueprint $table) {
-            $table->increments('id')->unique();
-            $table->string('name');
-            $table->string('email');
-            $table->string('downloadFile');
-            $table->timestamps();
+        Schema::create('upload_file', function (Blueprint $table) {
+        $table->increments('id')->unique();
+        $table->string('fileName');
+        $table->string('path');
+        $table->timestamps();
         });
+   
     }
 
     /**
@@ -29,6 +29,6 @@ class CreatePUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('p_users');
+        Schema::dropIfExists('upload_file');
     }
 }
