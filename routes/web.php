@@ -17,11 +17,24 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/admin', function(){
     return view("admin");
-});
-Route::post('/admin/putfile', 'PutFileController@putFile');
+})->middleware('auth');
 
-Route::post('/getfile', 'GetFileController@getFile')->middleware('check.nm');
+Route::get('/test',function(){
+    return view("test");
+});
+
+Route::get('/wechat-test', function (\Illuminate\Http\Request $request) {
+
+    //    $user = session('wechat.oauth_user');
+    
+        return view('wechat', [
+           'jssdk' => $request->get('jssdk')
+        ]);
+    });
+
+
+Route::post('/admin/putfile', 'PutFileController@putFile');
+Route::get('/presentation', 'Controller@presentation');
+
