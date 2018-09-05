@@ -17,6 +17,7 @@ class UploadFile extends Migration
         $table->increments('id')->unique();
         $table->string('fileName');
         $table->string('path');
+        $table->string('eventId');
         $table->timestamps();
         });
    

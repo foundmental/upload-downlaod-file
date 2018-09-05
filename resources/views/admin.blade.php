@@ -17,21 +17,28 @@
 <body>
     <div>
         <div id="admin">
-            <img class="phoceis-logo" src="../../images/phoceislogo.png">
-            <form action="http://gt.phoceis.cc/admin/putfile" method="post" enctype="multipart/form-data" novalidate="true">
-                <p><input class="uploadfile" type="file" name="uploadfile"></p>    
-                <p><input class="btn btn-outline-secondary" type="submit" value="Submit" > </p>
+        <div class="upload-file">
+        <img class="phoceis-logo" src="../../images/phoceislogo.png">
+            <form action="http://gt.phoceis.cc/admin/putfile" method="post" enctype="multipart/form-data"  novalidate="true">
+                <!-- <p><input type="hidden" name="_token" :value="csrf"></p> -->
                 {{ csrf_field() }}
+                <p>Event: <input class="event" type="text" name="eventName"></p>    
+                <p><input class="file" type="file" accept='application/pdf' name="uploadfile"></p>    
+                <div>
+                    <button type="button" class="btn btn-secondary">Only pdf file format can upload</button>
+                     <input class="btn btn-outline-secondary" type="submit" value="Submit" >         
+                </div>
             </form>
+        </div>
         </div>
     </div>
 <script src="{{ mix('js/app.js') }}"></script>
 
 <style scoped>
-    #admin{
+    .upload-file{
         text-align:center;
     } 
-    .uploadfile{
+    .file{
         height: 35px;
         border: 1px solid #6c757d;
         border-radius: 0.25rem;
@@ -42,7 +49,14 @@
         margin-top: 20px;
         height: 100px;
     }
-
+    .event{
+        margin-top: 20px;
+    }
 </style>
+
+
+
+
+
 </body>
 </html>
