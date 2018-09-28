@@ -33,14 +33,14 @@ class Controller extends BaseController
             GtUser::where('email', $email)
             ->update(['name' => $name]);
         }
-
         if($emailDB != $email || $nameDB != $name){
              $gtUser->save();
         }
     }
 
     public function presentation() {
-        $fileName=$uploadFile->fileName; 
+        $uploadFile = UploadFile::orderBy('id','desc')->first();
+        $fileName = $uploadFile->fileName; 
         $file = storage_path()."/app/public/upload/".$fileName;
 
         $headers = array(

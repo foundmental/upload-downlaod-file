@@ -1,17 +1,17 @@
 <template>
-    <div class="upload-file">
+    <div id="admin">
         <div class="">
            
       <img class="image" src="../../images/pic1.jpg">
       <img class="image" src="../../images/background.jpg">
         </div>
-        <!-- <img class="phoceis-logo" src="../../images/phoceislogo.png">
+        <img class="phoceis-logo" src="../../images/phoceislogo.png">
             <form action="http://gt.phoceis.cc/admin/putfile" method="post" enctype="multipart/form-data" novalidate="true">
                 <p><input type="hidden" name="_token" :value="csrf"></p>
                 <p><input class="file" type="file" name="uploadfile"></p>    
                 <p><input class="btn btn-outline-secondary" type="submit" value="Submit" > </p>
                
-        </form> -->
+        </form>
     </div>
 </template>
 <script>

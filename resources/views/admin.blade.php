@@ -8,19 +8,18 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Phoceis') }}</title>
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     
 </head>
 <body>
-    <div>
+    <!-- <div> -->
         <div id="admin">
-        <div class="upload-file">
-        <img class="phoceis-logo" src="../../images/phoceislogo.png">
+        <!-- <div class="upload-file"> -->
+        <!-- <img class="phoceis-logo" src="../../images/phoceislogo.png">
             <form action="http://gt.phoceis.cc/admin/putfile" method="post" enctype="multipart/form-data"  novalidate="true">
-                <!-- <p><input type="hidden" name="_token" :value="csrf"></p> -->
                 {{ csrf_field() }}
                 <p>Event: <input class="event" type="text" name="eventName"></p>    
                 <p><input class="file" type="file" accept='application/pdf' name="uploadfile"></p>    
@@ -28,13 +27,16 @@
                     <button type="button" class="btn btn-secondary">Only pdf file format can upload</button>
                      <input class="btn btn-outline-secondary" type="submit" value="Submit" >         
                 </div>
-            </form>
+            </form> -->
         </div>
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 <script src="{{ mix('js/app.js') }}"></script>
 
 <style scoped>
+    .btn-secondary{
+        background-color: #1dc5ef;
+    }
     .upload-file{
         text-align:center;
     } 

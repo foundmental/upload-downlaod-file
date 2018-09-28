@@ -17,3 +17,4 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 Route::post('/user', 'Controller@user');
+Route::get('/admin/checkUploadHistory', 'AdminController@checkUploadHistory');

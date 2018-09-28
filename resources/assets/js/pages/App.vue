@@ -1,11 +1,9 @@
 <template>
-    <div id="app" class="">
        <div class="page">
             <transition name="fade">
                 <router-view></router-view>
             </transition>
         </div>
-    </div>
 </template>
 
 <script>
@@ -39,7 +37,6 @@ export default {
         width: 100%;
         height: 100%;
    }
-
    #app {
        top: 0;
        right: 0;

@@ -8,14 +8,16 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Phoceis') }}</title>
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
     
 </head>
 <body>
 <div id="app"></div>
-<script src="{{ mix('js/app.js') }}"></script>
 </body>
+<script src="{{ mix('js/app.js') }}"></script>
+
 </html>

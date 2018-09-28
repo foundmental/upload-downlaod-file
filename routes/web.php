@@ -17,9 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', function(){
-    return view("admin");
-})->middleware('auth');
+// Route::get('/admin', function(){
+//     return view("admin.upload");
+// })->middleware('auth');
 
 Route::get('/test',function(){
     return view("test");
@@ -34,7 +34,7 @@ Route::get('/wechat-test', function (\Illuminate\Http\Request $request) {
         ]);
     });
 
-
-Route::post('/admin/putfile', 'PutFileController@putFile');
+Route::get('/admin' , "AdminController@home")->middleware('auth');;
+Route::post('/admin/putfile', 'AdminController@putFile');
 Route::get('/presentation', 'Controller@presentation');
 
