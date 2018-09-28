@@ -22,7 +22,7 @@ class RedirectIfAuthenticated
             //  var_dump(Auth::guard($guard)->check());
             // var_dump('the user is logged in');
      //   }
-        
+        sdfasdfasdfasdf
         return $next($request);
     }
 }
